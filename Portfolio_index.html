@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Marcelino Carrasco | Portfólio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+
+    header h1 {
+      color: #38bdf8;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .inicio {
+      min-height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 8%;
+      background: linear-gradient(135deg, #0f172a, #1e3a5f);
+    }
+
+    .inicio h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .inicio h2 span {
+      color: #38bdf8;
+    }
+
+    .inicio p {
+      max-width: 650px;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .botao {
+      display: inline-block;
+      width: fit-content;
+      background: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .botao:hover {
+      background: #7dd3fc;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .titulo-secao {
+      font-size: 30px;
+      color: #38bdf8;
+      margin-bottom: 25px;
+    }
+
+    .sobre p {
+      max-width: 800px;
+      font-size: 17px;
+    }
+
+    .projetos {
+      background: #111827;
+    }
+
+    .lista-projetos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+    }
+
+    .card h3 {
+      color: #7dd3fc;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card p {
+      margin-bottom: 15px;
+    }
+
+    .tecnologias {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .link-projeto {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .link-projeto:hover {
+      text-decoration: underline;
+    }
+
+    .contato p {
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111827;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .inicio h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Gabriel Marcelino Carrasco</h1>
+
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="inicio">
+      <h2>Olá, eu sou <span>Gabriel Carrasco</span></h2>
+
+      <p>
+        Estudante de Ciência da Computação, interessado em tecnologia,
+        desenvolvimento de sistemas e criação de soluções práticas.
+      </p>
+
+      <a class="botao" href="#projetos">Ver projetos</a>
+    </section>
+
+    <section class="sobre" id="sobre">
+      <h2 class="titulo-secao">Sobre mim</h2>
+
+      <p>
+        Sou estudante de Ciência da Computação e estou em busca de oportunidades
+        para desenvolver meus conhecimentos na área de tecnologia. Tenho
+        conhecimentos em Python, lógica de programação, Git, GitHub, Excel e
+        noções de SQL. Gosto de aprender, criar projetos e melhorar minhas
+        habilidades na prática.
+      </p>
+    </section>
+
+    <section class="projetos" id="projetos">
+      <h2 class="titulo-secao">Meus projetos</h2>
+
+      <div class="lista-projetos">
+        <article class="card">
+          <h3>Controle de Estoque</h3>
+
+          <p>
+            Sistema desenvolvido para auxiliar no controle de produtos,
+            fornecedores, preços e quantidade de itens em estoque.
+          </p>
+
+          <p class="tecnologias">
+            Tecnologias: Python
+          </p>
+
+          <a class="link-projeto" href="#" target="_blank">
+            Ver repositório no GitHub
+          </a>
+        </article>
+
+        <article class="card">
+          <h3>Registro de Produtividade</h3>
+
+          <p>
+            Sistema para registrar a produtividade por meio do ID do usuário e
+            código do pedido, permitindo organizar informações de início e fim
+            das atividades.
+          </p>
+
+          <p class="tecnologias">
+            Tecnologias: Python
+          </p>
+
+          <a class="link-projeto" href="#" target="_blank">
+            Ver repositório no GitHub
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contato" id="contato">
+      <h2 class="titulo-secao">Contato</h2>
+
+      <p>
+        Você pode entrar em contato comigo ou acompanhar meus projetos pelo
+        GitHub.
+      </p>
+
+      <a class="botao" href="#" target="_blank">Meu GitHub</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Gabriel Carrasco. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
