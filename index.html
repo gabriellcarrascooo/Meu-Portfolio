@@ -17,6 +17,7 @@
       <a href="#sobre">Sobre</a>
       <a href="#projetos">Projetos</a>
       <a href="#contato">Contato</a>
+      <a href="#feedback">Feedback</a>
     </nav>
   </header>
 
@@ -96,11 +97,60 @@
       <a class="botao" href="https://www.linkedin.com/in/gabriel-marcelino-carrasco-4ba592341/" target="_blank" rel="noopener noreferrer">Meu LinkedIn</a>
       <a class="botao" href="https://github.com/gabriellcarrascooo" target="_blank" rel="noopener noreferrer">Meu GitHub</a>
     </section>
+
+    <section class="feedback" id="feedback">
+      <h2 class="titulo-secao">Deixe seu Feedback</h2>
+
+      <p>Gostaria de saber sua opinião! Envie um comentário ou sugestão:</p>
+
+      <form id="formulario-feedback" class="formulario-feedback">
+        <div class="grupo-form">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+
+        <div class="grupo-form">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        </div>
+
+        <div class="grupo-form">
+          <label for="mensagem">Seus comentários:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite seu feedback aqui..." required></textarea>
+        </div>
+
+        <button type="submit" class="botao">Enviar Feedback</button>
+      </form>
+
+      <div id="mensagem-status" class="mensagem-status" style="display: none;"></div>
+    </section>
   </main>
 
   <footer>
     <p>© 2026 Gabriel Carrasco. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    document.getElementById('formulario-feedback').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const mensagem = document.getElementById('mensagem').value;
+      const statusDiv = document.getElementById('mensagem-status');
+      
+      const assunto = `Feedback do Portfolio - ${nome}`;
+      const corpo = `Nome: ${nome}%0AEmail: ${email}%0A%0AMensagem:%0A${mensagem}`;
+      
+      const linkEmail = `mailto:gabre15carrasco@gmail.com?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+      
+      window.location.href = linkEmail;
+      
+      statusDiv.textContent = 'Redirecionando para seu cliente de email...';
+      statusDiv.style.display = 'block';
+      statusDiv.className = 'mensagem-status sucesso';
+    });
+  </script>
 
 </body>
 </html>

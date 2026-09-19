@@ -147,6 +147,84 @@
       font-size: 17px;
     }
 
+    .feedback {
+      background: #111827;
+    }
+
+    .feedback p {
+      margin-bottom: 20px;
+      font-size: 17px;
+      color: #cbd5e1;
+    }
+
+    .formulario-feedback {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .grupo-form {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grupo-form label {
+      color: #7dd3fc;
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .grupo-form input,
+    .grupo-form textarea {
+      background: #0f172a;
+      color: #e2e8f0;
+      border: 1px solid #334155;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-family: Arial, sans-serif;
+      transition: 0.3s;
+    }
+
+    .grupo-form input:focus,
+    .grupo-form textarea:focus {
+      outline: none;
+      border-color: #38bdf8;
+      box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+    }
+
+    .grupo-form textarea {
+      resize: vertical;
+    }
+
+    .formulario-feedback .botao {
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+
+    .mensagem-status {
+      color: #86efac;
+      font-weight: bold;
+      padding: 12px;
+      background: #1e3a3a;
+      border-radius: 6px;
+      border-left: 4px solid #86efac;
+    }
+
+    .mensagem-status.erro {
+      color: #f87171;
+      background: #3a1e1e;
+      border-left-color: #f87171;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
